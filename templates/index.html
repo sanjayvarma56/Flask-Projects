@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Greeting</title>
+</head>
+<body>
+    <h1>Personal Greeting App</h1>
+    {% if name %}
+        <h2>Hello {{ name }}!</h2>
+    {% else %}
+        <form method="POST">
+            <label>Enter your name:</label>
+            <input type="text" name="name">
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+</body>
+</html>
