@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Converter</title>
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        <form method="POST">
+            <label for="temperature">Enter temperature:</label>
+            <input type="number" name="temperature">
+            <br>
+            <label for="unit">Select unit of input Temperature:</label>
+            <select name="unit">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+            </select>
+            <button type="submit">Convert</button>
+        </form>
+        {% if result is not none %}
+            <p>Converted Temperature: {{ result }}</p>
+        {% endif %}
+    </body>
+</html>
