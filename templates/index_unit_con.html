@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit Converter</title>
+    </head>
+    <body>
+        <h1>Unit Converter</h1>
+        <form method="POST" action="/">
+            <label for="distance">Enter distance:</label>
+            <input type="number" id="distance" name="distance">
+            <br><br>
+            <label for="operation">Select conversion:</label>
+            <select id="operation" name="operation" required>
+                <option value="km_to_miles">Kilometers to Miles</option>
+                <option value="miles_to_km">Miles to Kilometers</option>
+                <option value="m_to_km">Meters to Kilometers</option>
+                <option value="km_to_m">Kilometers to Meters</option>
+                <option value="m_to_cm">Meters to Centimeters</option>
+                <option value="cm_to_m">Centimeters to Meters</option>
+                <option value="m to feet">Meters to Feet</option>
+                <option value="feet to m">Feet to Meters</option>
+                <option value="cm to inches">Centimeters to Inches</option>
+                <option value="inches to cm">Inches to Centimeters</option>
+                <option value="kg_to_pounds">Kilograms to Pounds</option>
+                <option value="pounds_to_kg">Pounds to Kilograms</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Convert">
+        </form>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </body>
+</html>
