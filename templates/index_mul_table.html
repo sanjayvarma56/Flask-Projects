@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        <form method="POST">
+            <label for="number">Enter a number:</label>
+            <input type="number" name="number">
+            <button type="submit">Generate</button>
+            </form>
+        {% if table is not none %}
+        {%for i in range(1, 21)%}
+            <p>{{ number }} x {{ i }} = {{ table[i-1] }}</p>
+        {% endfor %}
+        {% endif %}
+    </body>
+</html>
