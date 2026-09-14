@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Word Count</title>
+    </head>
+    <body>
+        <h1>Word Count</h1>
+        <form method = "POST">
+            <label for="text">Enter text:</label>
+           <textarea name="text" rows="5" cols="40"></textarea>
+            <input type="submit" value="Count Words">
+        </form>
+        {% if words is not none %}
+            <p>Word Count: {{ words }}</p>
+        {% endif %}
+    </body>
+</html>
