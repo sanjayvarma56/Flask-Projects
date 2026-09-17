@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Character Counter</title>
+    </head>
+    <body>
+        <h1>Character Counter</h1>
+        <form method = "POST">
+            <label for="text">Enter text:</label>
+            <textarea name="text" rows="5" cols="40"></textarea>
+            <input type="submit" value="Count Characters">
+        {% if characters is not none %}
+            <p>Character Count: {{ characters }}</p>
+        {% endif %}
+        </form>
+    </body>
+</html>
